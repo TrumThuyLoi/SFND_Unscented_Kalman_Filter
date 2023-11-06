@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
-add_definitions(-std=c++11)
+add_definitions(-std=c++17)
 
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
+set(EIGEN_INCLUDE_DIRS "./src")
 
 project(playback)
+
+include_directories(${EIGEN_INCLUDE_DIRS})
 
 find_package(PCL 1.2 REQUIRED)
 
